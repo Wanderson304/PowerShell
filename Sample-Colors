@@ -1,0 +1,10 @@
+
+Clear-Host
+
+Write-Host "  " 
+Write-Host "===============================================================" 
+Write-Host "  This color is Red " -Foreground Red
+Write-Host "  This color is Yello  " -Foreground Yello
+Write-Host "  This color is Blue " -Foreground Blue
+Write-Host "==============================================================="
+
