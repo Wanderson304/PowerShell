@@ -1,5 +1,6 @@
 # Creating Observer
 # Using to monitor some service or collect data from time to time
+# base: https://stackoverflow.com/questions/35064964/powershell-script-to-check-if-service-is-started-if-not-then-start-it
 
 $DataPath = "C:\Users\WandersonSilva\OneDrive - Bravo GRC\Documentos\Teste"
 $n = 0 
