@@ -1,4 +1,6 @@
 #Display odd numbers
+
+$n = 0
 while ($n -le 20) {
     $n++
     
