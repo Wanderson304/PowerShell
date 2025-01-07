@@ -14,6 +14,6 @@ foreach($Employee in $EmployeesData){
 #Normal foreach
 foreach($Employee in $EmployeesData){
  
-    $Employee.PrimeiroNome, $Employee.departamenrto, $Employee.DOB
+    Write-Host "$($Employee.PrimeiroNome)  $($Employee.departamenrto)  has date birth of $($Employee.DOB)"
  
  }
