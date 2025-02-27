@@ -1,0 +1,18 @@
+# NOme da tarefa
+$taskName = "SendE-mail"
+
+# Arquivo que será executado na ação do Job
+$scriptPath = "E:\Documentos Pessoais\PowerShell\Powershell\00 - Outros\send_mail_teste.ps1"
+
+# Define a ação: Executar o PowerShell com o script
+$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-File `"$scriptPath`""
+
+# Define o gatilho: Executar às 08:00 AM somente nas segundas-feiras
+# pode passar uma variavel do tipo texto caso queira da a opção de escolher o dia
+$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 08:00AM
+
+# Configuração da tarefa
+$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
+
+# Criar a tarefa no Agendador do Windows
+Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings -User "$env:USERNAME" -RunLevel Highest
