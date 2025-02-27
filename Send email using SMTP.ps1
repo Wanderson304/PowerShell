@@ -5,7 +5,7 @@
 #E-mail e senha do remetente 
 $Username = "e-mail do remetente";
 $Password = "senha";
-#Caminho do Anexo
+#Caminho do Anexo que será enviado
 $path = "C:\cursoaulaead.txt";
 
 function Send-ToEmail([string]$email, [string]$attachmentpath){
