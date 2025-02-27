@@ -4,6 +4,7 @@
 $taskName = "SendE-mail"
 
 # Arquivo que será executado na ação do Job
+# Pode ser um arquivo que envia um e-mail
 $scriptPath = "E:\Documentos Pessoais\PowerShell\Powershell\00 - Outros\send_mail_teste.ps1"
 
 # Define a ação: Executar o PowerShell com o script
