@@ -1,3 +1,5 @@
+# https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/unregister-scheduledtask?view=windowsserver2025-ps
+
 # NOme da tarefa
 $taskName = "SendE-mail"
 
