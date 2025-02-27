@@ -1,5 +1,8 @@
 # https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/unregister-scheduledtask?view=windowsserver2025-ps
 
+#O código abaixo excuta o script send_mail_teste.ps1 toda segunda feira a partir das 08:00 AM
+#O arquivo send_mail_teste.ps1 é um envio de e-mail
+
 # NOme da tarefa
 $taskName = "SendE-mail"
 
