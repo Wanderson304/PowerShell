@@ -2,8 +2,10 @@
 #base de configurações de servidor smtp do Office 365
 #https://support.microsoft.com/pt-br/office/configura%C3%A7%C3%B5es-pop-imap-e-smtp-para-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040
 
+#E-mail e senha do remetente 
 $Username = "e-mail do remetente";
 $Password = "senha";
+#Caminho do Anexo
 $path = "C:\cursoaulaead.txt";
 
 function Send-ToEmail([string]$email, [string]$attachmentpath){
@@ -23,4 +25,5 @@ function Send-ToEmail([string]$email, [string]$attachmentpath){
     write-host "Mail Sent" ; 
     $attachment.Dispose();
  }
+#E-mail do destinatário 
 Send-ToEmail  -email "e-mail destinatario" -attachmentpath $path;
