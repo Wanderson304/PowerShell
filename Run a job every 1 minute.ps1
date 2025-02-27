@@ -1,6 +1,5 @@
-#Executar um job a cada 1 minuto idefinidademente
-
-
+# Executar um job a cada 1 minuto idefinidademente
+# https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/unregister-scheduledtask?view=windowsserver2025-ps
 
 #criar tarefa
 
@@ -11,7 +10,7 @@ $taskName = "SendE-mail"
 $scriptPath = "E:\Documentos Pessoais\PowerShell\Powershell\00 - Outros\send_mail_teste.ps1"
 
 # Define a ação: Executar o PowerShell com o script
-$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-File `"$scriptPath`""
+$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-File `"$scriptPath`"" -windowstyle hidden 
 
 # Define o gatilho: Executar a cada 1 minuto indefinidamente
 $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 1)
@@ -23,5 +22,7 @@ $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoi
 Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings -User "$env:USERNAME" -RunLevel Highest
 
 # Para a tarefa
-#Unregister-ScheduledTask -TaskName "MeuJobMinutal" -Confirm:$false
+# Unregister-ScheduledTask -TaskName "sendE-mailTeste 1" -Confirm:$false
 
+# Listar agendamentos
+Get-ScheduledJob
