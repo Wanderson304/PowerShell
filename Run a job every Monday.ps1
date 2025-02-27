@@ -8,7 +8,8 @@ $scriptPath = "E:\Documentos Pessoais\PowerShell\Powershell\00 - Outros\send_mai
 $action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-File `"$scriptPath`""
 
 # Define o gatilho: Executar às 08:00 AM somente nas segundas-feiras
-# pode passar uma variavel do tipo texto caso queira da a opção de escolher o dia
+# Pode passar uma variavel do tipo texto caso queira da a opção de escolher o dia
+# Substitua Monday por outro dia da semana caso queira
 $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 08:00AM
 
 # Configuração da tarefa
