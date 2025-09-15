@@ -2,6 +2,9 @@
 #O Script abaixo verificar e instalar o modulo WriteAscii de forma silenciosa, sem permissão do usuário.
 #O mesmo script pode ser usado para outros modulos.
 
+#Documentação WriteAscii
+#https://www.powershelladmin.com/wiki/Ascii_art_characters_powershell_script.php
+
 #===============================================================================
 
 #Install modulo WriteAscii
