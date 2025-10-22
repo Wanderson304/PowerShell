@@ -1,0 +1,24 @@
+
+Function Calculate-TotalPrice {
+    param (
+        [hashtable]$Cart,
+        [decimal]$TaxRate = 0.07
+    )
+    $total = 0
+    foreach ($item in $Cart.Keys) {
+        $total += $Cart[$item]
+    }
+    $totalWithTax = $total * (1 + $TaxRate)
+    return [math]::Round($totalWithTax, 2)
+}
+
+# Simulated shopping cart
+$cart = @{
+    "Laptop" = 999.99
+    "Mouse"  = 25.50
+    "Keyboard" = 45.75
+}
+
+# Calling the function
+$totalPrice = Calculate-TotalPrice -Cart $cart
+Write-Output "The total price including tax is: $totalPrice"
